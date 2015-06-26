@@ -128,3 +128,100 @@
 	----------
 		101 = 5;
 
+位运算乘法
+
+	2 * 8 = 16;
+	2<<3 = 16;
+
+变量互换
+
+	int n = 3, m = 8;
+	n = n + m;
+	m = n - m;
+	n = n - m;
+
+"异或运算符^"；一个数连续'异或'另个一数两次, 等于原数; eg: 5 ^ 3 ^ 3 = 5; 
+
+	int a = 3, b = 8;
+	a = a ^ b;	//(a ^ b);
+	b = a ^ b;	//(a ^ b) ^ b;
+	a = a ^ b;	//(a ^ b) ^ ((a ^ b) ^ b);
+
+通过"&"运算进行进制转换
+	
+	//十进制转十六进制实现
+	/*计算原理
+		0000-0000 0000-0000 0000-0000 0011-1100 = 60;
+		60 & 15(为了取到最小四位上有效的值"1", 4位二进制表示1位十六进制);
+		0000-0000 0000-0000 0000-0000 0011-1100
+		0000-0000 0000-0000 0000-0000 0000-1111
+		------------------------------------------
+	n1=	0000-0000 0000-0000 0000-0000 0000-1100 = 12;
+
+		取到第一位十六进制的值后，取第二位十六进制的值，将原数右移四位;
+		60 >> 4;
+		0000-0000 0000-0000 0000-0000 0000-0011		(-1100)
+		0000-0000 0000-0000 0000-0000 0000-1111
+		------------------------------------------
+	n2=	0000-0000 0000-0000 0000-0000 0000-0011 = 3;
+	*/
+
+	class operateDemo6
+	{
+		public static void main(String[] arg)
+		{
+			int num = 60;
+
+			//获取60的最低4位，通过 & 15; 
+			int n1 = num & 15;
+
+			System.out.println((char)(n1 - 10 + 'A'));
+
+			//要获取下一组四位，将60右移4位;
+			int temp = 60 >> 4;
+
+			//对temp的值进行最低四位的获取.
+			int n2 = temp & 15;
+			
+			System.out.println(n2);
+		}
+	}
+
+关于季节月份判断处理
+	
+	class getDay
+	{
+		public static void main(String[] args)
+		{
+			int x = 5;
+			if(x > 12 || x < 1){		//先确定有效数据范围
+				System.out.println("0");
+			}else if(x >= 3 && x <=5){
+				System.out.println("1");
+			}else if(x >= 6 && x <= 8){
+				System.out.println("2");
+			}else if(x >= 9 && x <=11){
+				System.out.println("3");
+			}else{
+				System.out.println("4");
+			};
+		}
+	}
+
+关于switch: 
+
+	switch(x) 	//x只能为byte short int char四中类型
+	{
+		case 1:
+			System.out.println("a");
+			break;
+		case 2:
+			System.out.println("b");
+			break;
+		case 3:
+			System.out.println("c");
+			break;
+		case 4:
+			System.out.println("d");
+			break;
+	}

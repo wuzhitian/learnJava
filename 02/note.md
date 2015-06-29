@@ -25,9 +25,10 @@
 			System.out.println(ch);
 		}
 	}
-
+	
 -----------------------
 
+```java
 	class demo5
 	{
 		public static void main(String[] args)
@@ -43,9 +44,11 @@
 			System.out.println(y);		//4270.0
 		}
 	}
+```
 
 ##### 赋值和比较运算符
 
+```java
 	class operateDemo0
 	{
 		public static void main(String[] args)
@@ -61,6 +64,7 @@
 			System.out.println(s);
 		}
 	}
+```
 
 ##### 逻辑运算符
 	/*
@@ -84,7 +88,7 @@
 
 	<<(左移)相当于乘以2的移动位数次幂;
 	>>(右移)相当于除以2的移动位数次幂取整;
-
+```java
 	class operateDemo2
 	{
 		public static void main(String[] args)
@@ -104,6 +108,7 @@
 			System.out.println("d0=" + d0 + ", d1=" + d1);
 		}
 	}
+```
 
 “与运算”，“或运算”和“异或运算”
 	
@@ -188,7 +193,8 @@
 	}
 
 关于季节月份判断处理
-	
+
+```java	
 	class getDay
 	{
 		public static void main(String[] args)
@@ -207,9 +213,11 @@
 			};
 		}
 	}
+```
 
 关于switch: 
 
+```java
 	switch(x) 	//x只能为byte short int char四中类型
 	{
 		case 1:
@@ -225,3 +233,4 @@
 			System.out.println("d");
 			break;
 	}
+```

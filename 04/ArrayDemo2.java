@@ -34,13 +34,16 @@ class ArrayDemo2
 	/*选择排序: 一个元素跟其他所有元素相比*/
 	public static void selectSort(int[] arr)
 	{
-		for(int i = 0; i < arr.length-1; i++)	//i < arr.length-1因为最后一个元素再跟前面比较，没含义
+		for(int i = 0; i < arr.length - 1; i++)
+		//i < arr.length-1: 因为最后一个元素再跟前面比较，没含义
+		//因为最后一次内循环已经可以确定最后两个元素的位置
 		{
 			for(int j = i+1; j < arr.length; j++)
 			{
 				if(arr[i] > arr[j])
 				{
-					swap(arr, i, j);				}
+					swap(arr, i, j);
+				}
 			}
 		}
 	}
@@ -48,8 +51,11 @@ class ArrayDemo2
 	public static void bubbleSort(int[] arr)
 	{
 		for(int i = 0; i < arr.length-1; i++)
+		//i < arr.length-1: 因为最后一个元素再跟前面比较，没含义
+		//因为第一轮冒泡后，已经可以确定最大的元素在最后的位置;
 		{
-			for(int j = 0; j < arr.length - i -1; j++)	//-i: 让每一次比较的元素减少，-1: 避免脚标越界
+			for(int j = 0; j < arr.length - i -1; j++)	
+			//-i: 让每一次比较的元素减少，-1: 避免脚标越界
 			{
 				if(arr[j] < arr[j+1])
 				{
@@ -79,5 +85,6 @@ class ArrayDemo2
 				System.out.print(arr[i] + "]");
 			}
 		}
+		System.out.println();
 	}
 }

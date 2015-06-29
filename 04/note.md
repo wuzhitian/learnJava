@@ -46,6 +46,7 @@
 			int[] arr0 = new int[2];
 			int arr1[] = new int[3];
 			int[] arr2 = new int[]{1,2,3};
+			int[] arr3 = {1, 3, 4, 5};
 
 			// System.out.println(arr2[4]);
 			//ArrayIndexOutOfBoundsException: 4	数组越界异常
